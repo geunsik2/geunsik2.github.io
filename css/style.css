@@ -67,7 +67,7 @@ button:focus {
   margin: 0.5rem;
 }
 
-.max-container {  /* 브라우저의 사이즈와 요소 간 간격이 비례하여 커지기 때문에 최대 너비 설정 */
+.max-container {  /* 브라우저의 사이즈와 요소의 사이즈가 비례하기 때문에 최대 너비 설정 */
   max-width: var(--size-max-width);
   margin: auto; /* block 레벨의 요소를 수평으로 가운데 정렬 */
 }
@@ -219,4 +219,41 @@ button:focus {
 .job__period {
   color: var(--color-primary);
   font-size: 0.8rem;
+}
+
+/* Skills */
+#skills {
+  background-color: var(--color-primary-variant);
+  color: var(--color-text);
+}
+
+.skills {
+  display: grid;  /* grid container 설정 */
+  grid-template-columns: 6fr 4fr; /* 총 2개의 행이 있다고 명시 */
+  margin: 2rem 3rem;
+  border-radius: 8px;
+  overflow: hidden; /* .skills container 밖으로 나온 자식이 있다면 보이지 않도록 설정 */
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+.skills__title {
+  color: var(--color-accent);
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.skills__coding {
+  grid-row: span 2; /* 현재 위치한 곳에서부터 span 2개를 차지하도록 설정 */
+  padding: 1rem;
+  background-color: var(--color-primary);
+}
+
+.skills__tools {
+  padding: 1rem;
+}
+
+.skills__etc {
+  padding: 1rem;
+  background-color: var(--color-primary);
+  filter: brightness(150%); /* 동일한 색깔을 조금 다른 느낌으로 설정(150% 밝게) */
 }
