@@ -21,6 +21,7 @@
 
 body {
   font-family: 'Open Sans', snas-serif;
+  margin: 0;
 }
 
 h1,h2,h3,p,ul {
@@ -45,4 +46,51 @@ button {
 
 button:focus {
   outline: 1px solid var(--color-accent);
+}
+
+/* Header */
+.header {
+  background-color: var(--color-primary);
+  position: fixed; /* 스크롤링해도 화면 상단에 고정 */
+  top: 0; /* 가장 윗부분에 고정 */
+  width: 100%;  /* 부모(body) width의 100% */
+  padding: 1rem;  /* 모서리에 간격 부여 */
+  display: flex;  /* 수평으로 나란히 배치 */
+  justify-content: space-between;  /* flex box 안에 들어있는 아이템들 사이에 간격 부여 */
+  align-items: center;  /* flex box 안에 들어있는 아이템을 수직으로 가운데 정렬 */
+}
+
+.header__logo {
+  display: flex;  /* 수평으로 나란히 배치 */
+  align-items: center;  /* 수직으로 가운데 정렬 */
+  gap: 8px;  /* flex box 안에 들어있는 자식들 간의 여백 설정 */
+}
+
+.header__logo__img { 
+  /* .header__logo img: 페이지 내에 있는 모든 이미지 태그를 찾고, 그 이미지 태그들 중에 header logo에 들어있는 아이템을 골라낸다. 
+      성능 저하가 발생할 수 있으므로 가급적 명시적으로 클래스 이름을 지정해서 선택하는 것이 좋다. */
+  width: 36px;
+  height: 36px;
+}
+
+.header__logo__title {
+  font-size: 1.8rem;  /* rem: 상대적인 유닛 즉, 현재 브라우저의 디폴트 font-size에 1.8배 */
+}
+
+.header__menu {
+  display: flex;  /* 수평으로 나란히 배치 */
+  gap: 4px; /* flex box 안에 들어있는 자식들 간의 여백 설정 */
+}
+
+.header__menu__item {
+  padding: 8px 16px;  /* 위아래 8px, 양옆 16px  */
+}
+
+.header__menu__item:hover {
+  border-bottom: 1px solid var(--color-accent);
+}
+
+.header__menu__item.active {  /* .header__menu__item 클래스를 가진 것과 .active 클래스를 가진 것을 선택 */
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
 }
