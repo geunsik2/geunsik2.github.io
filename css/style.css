@@ -94,3 +94,50 @@ button:focus {
   border: 1px solid var(--color-accent);
   border-radius: 4px;
 }
+
+/* Home */
+#home {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: 5rem 1rem; /* 위아래 5rem, 양옆 1rem */
+  padding-top: 7rem;
+  text-align: center;
+}
+
+.home__avatar {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;  /* 이미지의 원래 비율 유지 */
+  border: 3px solid var(--color-accent);
+  border-radius: 100%;  /* 테두리를 원으로 설정 */
+}
+
+.home__title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+
+}
+
+.home__title--strong {
+  color: var(--color-accent);
+}
+
+.home__description {
+  font-size: 1.3rem;
+}
+
+.home__contact {
+  display: inline-block;  /* a태그는 inline 요소라 수직으로는 마진이 적용 안 되지만 해당 속성으로 해결 가능 */
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  padding: 0.5rem 1rem;
+  margin: 2rem;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.home__contact:hover {
+  background-color: transparent;
+  color: var(--color-text);
+  outline: 2px solid var(--color-accent); /* 콘텐츠 사이즈에 영향을 주지 않으면서 테두리를 적용 */
+}
