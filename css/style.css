@@ -80,7 +80,7 @@ button:focus {
 /* Header */
 .header {
   background-color: var(--color-primary);
-  position: fixed; /* 스크롤링해도 화면 상단에 고정 */
+  position: fixed; /* 스크롤링해도 화면에 고정 */
   top: 0; /* 가장 윗부분에 고정 */
   width: 100%; /* 부모(body) width의 100% */
   padding: 1rem; /* 요소 안쪽 여백 설정(상하좌우) */
@@ -428,4 +428,40 @@ button:focus {
   color: var(--color-accent);
   font-weight: bold;
   filter: brightness(70%); /* 동일한 색깔을 조금 다른 느낌으로 설정(70% 밝게) */
+}
+
+/* Arrow up */
+.arrow-up {
+  background-color: var(--color-primary);
+  position: fixed; /* 스크롤링해도 화면에 고정 */
+  bottom: 3rem;
+  right: 3rem;
+  font-size: 3rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 100%;
+  text-align: center;
+  box-shadow: 5px 5px 0px 0px var(--color-accent);
+}
+
+/* Footer */
+#contact {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.contact__links {
+  display: flex; /* 수평으로 나란히 배치 */
+  justify-content: center; /* flex box에 들어있는 아이템들 사이에 간격 부여 */
+  gap: 1rem; /* flex box에 들어있는 자식들 간의 여백 설정 */
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.contact__link {
+  transition: color 250ms ease-in; /* 모든 요소에 한해서 250ms 동안 ease-in 옵션으로 애니메이션 */
+}
+
+.contact__link:hover {
+  color: var(--color-accent);
 }
