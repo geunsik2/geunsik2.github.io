@@ -52,7 +52,7 @@ button {
 }
 
 button:focus {
-  outline: 1px solid var(--color-accent);
+  outline: 1px solid transparent;
 }
 
 /* Common */
@@ -113,13 +113,24 @@ button:focus {
   font-size: 1.8rem; /* rem: 상대적인 유닛 즉, 현재 브라우저의 디폴트 font-size에 1.8배 */
 }
 
+.header__toggle {
+  display: none;
+  color: var(--color-text);
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1.3rem;
+  right: 1rem;
+}
+
 .header__menu {
   display: flex; /* 수평으로 나란히 배치 */
   gap: 4px; /* flex box 안에 들어있는 자식들 간의 여백 설정 */
 }
 
 .header__menu__item {
+  display: block;
   padding: 8px 16px; /* 위아래 8px, 양옆 16px  */
+  border-bottom: 1px solid transparent;
 }
 
 .header__menu__item:hover {
@@ -488,7 +499,7 @@ button:focus {
 @media screen and (max-width: 768px) {
   /* 브라우저 너비별로 스타일링 */
   .section {
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
   }
 
   .title {
@@ -502,13 +513,23 @@ button:focus {
   .header {
     flex-direction: column; /* flex box에 들어있는 아이템을 수직으로 나열 */
     align-items: start; /* 왼쪽 정렬 */
+    background-color: var(--color-primary);
+  }
+
+  .header__toggle {
+    display: block;
   }
 
   .header__menu {
+    display: none;
     flex-direction: column; /* flex box에 들어있는 아이템을 수직으로 나열 */
     text-align: center;
     padding: 1rem 4rem;
     gap: 1rem;
+  }
+
+  .header__menu.open {
+    display: flex;
   }
 
   .header__nav {
