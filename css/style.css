@@ -460,6 +460,7 @@ button:focus {
   border-radius: 100%;
   text-align: center;
   box-shadow: 5px 5px 0px 0px var(--color-accent);
+  transition: opacity 300ms ease-in; /* opacity 속성에 한해서 300ms 동안 ease-in 옵션으로 애니메이션 */
 }
 
 /* Footer */
