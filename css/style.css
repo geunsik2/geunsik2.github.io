@@ -377,6 +377,12 @@ button:focus {
   grid-template-columns: repeat(4, 1fr); /* 1배율로 4개 열 생성 */
   grid-template-rows: repeat(2, 1fr); /* 1배율로 2개 행 생성 */
   gap: 1rem; /* flex box 안에 들어있는 자식들 간의 여백 설정 */
+  transition: all 250ms ease-out;
+}
+
+.projects.anim-out {
+  opacity: 0;
+  transform: scale(0.96) translateY(20px);
 }
 
 .project {
