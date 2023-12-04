@@ -22,6 +22,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth; /* 링크를 클릭하여 페이지 내에서 섹션으로 스크롤링될 때 부드러운 효과 적용 */
+}
+
 body {
   font-family: "Open Sans", snas-serif;
   margin: 0;
